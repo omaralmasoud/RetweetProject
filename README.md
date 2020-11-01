@@ -32,11 +32,12 @@ The main purpose for this application for marketing use as a bot.
 
 # Requirements
 
-+-------------------------+ 
+ 
 - Support Win 7,8,8.1,10
 - Support IE8 or later
 - Broadband Connection
-+-------------------------+  
+
+  
 
 # Thanks <3
 
