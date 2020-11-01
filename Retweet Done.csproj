@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{795D5E1C-37F8-4F55-89D9-13A5B8CA3203}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Retweet_Done</RootNamespace>
+    <AssemblyName>Retweet Done</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.1.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Conn.cs" />
+    <Compile Include="Classes\Operations.cs" />
+    <Compile Include="Classes\SystemOP.cs" />
+    <Compile Include="Classes\Users.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FreeSub.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FreeSub.Designer.cs">
+      <DependentUpon>FreeSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetUsersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GetUsersControl.Designer.cs">
+      <DependentUpon>GetUsersControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loding.Designer.cs">
+      <DependentUpon>Loding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manual LoginTw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manual LoginTw.Designer.cs">
+      <DependentUpon>Manual LoginTw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotSubPC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotSubPC.Designer.cs">
+      <DependentUpon>NotSubPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentSent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentSent.Designer.cs">
+      <DependentUpon>PaymentSent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsControl.Designer.cs">
+      <DependentUpon>SettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignupControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SignupControl.Designer.cs">
+      <DependentUpon>SignupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startwork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Startwork.Designer.cs">
+      <DependentUpon>Startwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubsControl.Designer.cs">
+      <DependentUpon>SubsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubsPay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubsPay.Designer.cs">
+      <DependentUpon>SubsPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SupportControl.Designer.cs">
+      <DependentUpon>SupportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupportUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SupportUserControl.Designer.cs">
+      <DependentUpon>SupportUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThankForReg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThankForReg.Designer.cs">
+      <DependentUpon>ThankForReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="three step.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="three step.Designer.cs">
+      <DependentUpon>three step.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tutorial.Designer.cs">
+      <DependentUpon>Tutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdatesUserControl.Designer.cs">
+      <DependentUpon>UpdatesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Work.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Work.Designer.cs">
+      <DependentUpon>Work.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkingControll.Designer.cs">
+      <DependentUpon>WorkingControll.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FreeSub.resx">
+      <DependentUpon>FreeSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetUsersControl.resx">
+      <DependentUpon>GetUsersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loding.resx">
+      <DependentUpon>Loding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manual LoginTw.resx">
+      <DependentUpon>Manual LoginTw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotSubPC.resx">
+      <DependentUpon>NotSubPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentSent.resx">
+      <DependentUpon>PaymentSent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SettingsControl.resx">
+      <DependentUpon>SettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignupControl.resx">
+      <DependentUpon>SignupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startwork.resx">
+      <DependentUpon>Startwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubsControl.resx">
+      <DependentUpon>SubsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubsPay.resx">
+      <DependentUpon>SubsPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupportControl.resx">
+      <DependentUpon>SupportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupportUserControl.resx">
+      <DependentUpon>SupportUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThankForReg.resx">
+      <DependentUpon>ThankForReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="three step.resx">
+      <DependentUpon>three step.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial.resx">
+      <DependentUpon>Tutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatesUserControl.resx">
+      <DependentUpon>UpdatesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Work.resx">
+      <DependentUpon>Work.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingControll.resx">
+      <DependentUpon>WorkingControll.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twitter_32px1.png" />
+    <None Include="Resources\Time_48px.png" />
+    <None Include="Resources\Ok_52px.png" />
+    <None Include="Resources\Online_52px1.png" />
+    <None Include="Resources\Online_52px.png" />
+    <None Include="Resources\One Free_52px.png" />
+    <None Include="Resources\WhatsApp_48px.png" />
+    <None Include="Resources\QR Code_64px.png" />
+    <None Include="Resources\Schedule_64px.png" />
+    <None Include="Resources\Bank Building_50px.png" />
+    <None Include="Resources\Best Seller_50px.png" />
+    <Content Include="logo.ico" />
+    <Content Include="logo_icon.ico" />
+    <Content Include="Resources\GE SS Two Light.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Sad_96px.png" />
+    <None Include="Resources\logo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_321px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Training_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contacts_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Support_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\1.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\loo.png" />
+    <None Include="Resources\Cancel_104px.png" />
+    <None Include="Resources\Play_104px.png" />
+    <None Include="Resources\Search_100px.png" />
+    <None Include="Resources\Password_104px.png" />
+    <None Include="Resources\Start_32px1.png" />
+    <None Include="Resources\User Groups_32px1.png" />
+    <None Include="Resources\4_52px.png" />
+    <None Include="Resources\3_52px.png" />
+    <None Include="Resources\2_52px.png" />
+    <None Include="Resources\1_52px.png" />
+    <None Include="Resources\Retweet_32px.png" />
+    <None Include="Resources\s.png" />
+    <None Include="Resources\ready1.png" />
+    <None Include="Resources\ready.png" />
+    <None Include="Resources\s1.png" />
+    <None Include="Resources\ss1.png" />
+    <None Include="Resources\ss.png" />
+    <None Include="Resources\User Groups_32px.png" />
+    <None Include="Resources\Logout Rounded Up_32px.png" />
+    <None Include="Resources\Connection Sync_32px1.png" />
+    <None Include="Resources\Save_32px.png" />
+    <None Include="Resources\Attach_32px.png" />
+    <None Include="Resources\Delete Property_32px.png" />
+    <None Include="Resources\Connection Sync_32px.png" />
+    <None Include="Resources\Sent_32px.png" />
+    <None Include="Resources\Message_32px.png" />
+    <None Include="Resources\Appointment Reminders_32px.png" />
+    <None Include="Resources\Headset_32px.png" />
+    <None Include="Resources\Clock_32px1.png" />
+    <None Include="Resources\Clock_32px.png" />
+    <None Include="Resources\Start_32px.png" />
+    <None Include="Resources\Circled User Male_322px.png" />
+    <None Include="Resources\Edit_32px.png" />
+    <None Include="Resources\Statistics_32px.png" />
+    <None Include="Resources\3D Touch_32px.png" />
+    <None Include="Resources\ID Card_32px.png" />
+    <None Include="Resources\Password_322px.png" />
+    <None Include="Resources\iPhone_32px.png" />
+    <None Include="Resources\Twitter_32px.png" />
+    <None Include="Resources\Contacts_32px2.png" />
+    <None Include="Resources\Edit User Male_32px.png" />
+    <None Include="Resources\Name_32px.png" />
+    <None Include="Resources\Circled User Male_32px.png" />
+    <None Include="Resources\Login Rounded_96px.png" />
+    <None Include="Resources\Password_32px.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\Chevron Right_32px.png" />
+    <None Include="Resources\User_32px.png" />
+    <None Include="Resources\Contacts_32px1.png" />
+    <None Include="Resources\tw.png" />
+    <None Include="Resources\logo %281%291.png" />
+    <None Include="Resources\tw-bac.png" />
+    <None Include="Resources\artistic-twitter-background.jpg" />
+    <None Include="Resources\Free-Twitter-Bird-Mosaic-Background.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
